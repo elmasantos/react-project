@@ -1,0 +1,24 @@
+.user-card {
+  margin: 20px 0;
+  background-color: #9be0e0;
+  width: 50%;
+  align-self: center; }
+  .user-card__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block-end: 10px;
+    margin-block-start: 10px; }
+  .user-card__name {
+    justify-content: center;
+    align-items: center;
+    font-variant-caps: all-small-caps;
+    font-size: 30px; }
+  .user-card__age {
+    font-size: 15px; }
+  .user-card__job {
+    font-size: 15px;
+    margin: auto; }
+  .user-card__description {
+    font-size: 15px;
+    margin: inherit; }

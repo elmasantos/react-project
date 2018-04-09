@@ -1,0 +1,33 @@
+.user-card {
+  margin: 20px 0;
+  background-color: rgb(155, 224, 224);
+  width: 50%;
+  align-self: center;
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block-end: 10px;
+    margin-block-start: 10px;
+  }
+
+  &__name {
+    font-variant-caps: all-small-caps;
+    font-size: 30px;
+  }
+
+  &__age {
+    font-size: 15px;
+  }
+
+  &__job {
+    font-size: 15px;
+    margin: auto;
+  }
+
+  &__description {
+    font-size: 15px;
+    margin: inherit;
+  }
+}
