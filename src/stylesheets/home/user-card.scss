@@ -1,8 +1,11 @@
 .user-card {
   margin: 20px 0;
-  background-color: rgb(155, 224, 224);
-  width: 50%;
+  background-color: rgb(255, 255, 255);
+  width: 30%;
   align-self: center;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: Courier New, Courier, monospace;
 
   &__info {
     display: flex;
@@ -23,7 +26,6 @@
 
   &__job {
     font-size: 15px;
-    margin: auto;
   }
 
   &__description {
