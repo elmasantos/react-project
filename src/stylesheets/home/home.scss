@@ -1,12 +1,14 @@
 .home {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: row;
 
   &__user-list {
-    background-color: rgb(235, 233, 233);
     display: flex;
     flex-direction: column;
+    width: 40%;
+    margin: 0 15px;
   }
 
 }
@@ -16,4 +18,5 @@ body {
   min-height: 1vh;
   width: 100%;
   margin: 0;
+  background-color: rgb(219, 216, 240);
 }

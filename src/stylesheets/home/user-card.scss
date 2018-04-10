@@ -1,35 +1,48 @@
 .user-card {
-  margin: 20px 0;
-  background-color: rgb(255, 255, 255);
-  width: 30%;
+  background-color: rgb(242, 242, 242);
+  width: 100%;
   align-self: center;
-  padding: 10px;
-  border-radius: 10px;
-  font-family: Courier New, Courier, monospace;
+  padding: 15px;
+  font-family: 'Antic Didone';
+  border-bottom: 1px solid rgb(189, 201, 217);
 
+    &:hover {
+      background-color: rgb(208, 240, 253)
+    }
   &__info {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-block-end: 10px;
-    margin-block-start: 10px;
   }
 
   &__name {
     font-variant-caps: all-small-caps;
     font-size: 30px;
+    font-weight: 100;
   }
 
   &__age {
     font-size: 15px;
+    &--blue {
+      color: rgb(134, 193, 235);
+      font-style: italic;
+    }
   }
 
   &__job {
     font-size: 15px;
+    &--blue {
+      color: rgb(134, 193, 235);
+      font-style: italic;
+    }
   }
 
   &__description {
     font-size: 15px;
-    margin: inherit;
+  }
+
+  .description {
+    margin-block-start: 10px;
+    margin-bottom: 5px;
   }
 }

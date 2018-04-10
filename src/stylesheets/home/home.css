@@ -1,14 +1,17 @@
 .home {
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: flex-start;
+  flex-direction: row; }
   .home__user-list {
-    background-color: #ebe9e9;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    width: 40%;
+    margin: 0 15px; }
 
 body {
   display: flex;
   min-height: 1vh;
   width: 100%;
-  margin: 0; }
+  margin: 0;
+  background-color: #dbd8f0; }
