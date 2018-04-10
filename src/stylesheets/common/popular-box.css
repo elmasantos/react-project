@@ -1,0 +1,27 @@
+.popular-box {
+  display: flex;
+  width: 75%;
+  height: 200px;
+  max-width: 300px;
+  min-width: 100px;
+  background-color: #f2f2f2;
+  text-transform: uppercase;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+  margin-bottom: 15px; }
+  .popular-box__element {
+    height: 145px; }
+  .popular-box__item {
+    text-transform: capitalize; }
+  .popular-box__content {
+    display: flex;
+    flex-direction: column;
+    color: #c0a2b1;
+    width: 100%;
+    padding: 15px; }
+  .popular-box__title {
+    justify-content: flex-start;
+    color: #2f6f88;
+    font-size: 13px; }

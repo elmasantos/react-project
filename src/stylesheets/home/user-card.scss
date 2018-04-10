@@ -3,7 +3,6 @@
   width: 100%;
   align-self: center;
   padding: 15px;
-  font-family: 'Antic Didone';
   border-bottom: 1px solid rgb(189, 201, 217);
 
     &:hover {
@@ -17,12 +16,12 @@
 
   &__name {
     font-variant-caps: all-small-caps;
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 100;
   }
 
   &__age {
-    font-size: 15px;
+    font-size: 14px;
     &--blue {
       color: rgb(134, 193, 235);
       font-style: italic;
@@ -30,7 +29,7 @@
   }
 
   &__job {
-    font-size: 15px;
+    font-size: 14px;
     &--blue {
       color: rgb(134, 193, 235);
       font-style: italic;
@@ -38,10 +37,11 @@
   }
 
   &__description {
-    font-size: 15px;
+    font-size: 12px;
   }
 
   .description {
+    font-size: 17px;
     margin-block-start: 10px;
     margin-bottom: 5px;
   }

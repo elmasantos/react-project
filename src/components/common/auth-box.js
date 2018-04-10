@@ -22,12 +22,11 @@ const AuthBox = () => {
 
   return (
     <div className='auth-box'>
-      <div className='auth-box__content'>
-        {renderAuthBox({ content: 'YOU ARE NOT IN' })}
-      </div>
+      <div className='auth-box__message'>YOU ARE NOT IN.</div>
+      <div className='auth-box__message'>SO JUST GET IN, NOW!</div>
       <div className='auth-box__actions'>
-        {renderButton({ color: 'red', title: 'SING IN'})}
-        {renderButton({ color: 'blue', title: 'SING UP'})}
+        {renderButton({ color: 'red', title: 'SIGN IN'})}
+        {renderButton({ color: 'blue', title: 'SIGN UP'})}
       </div>
     </div>
   )

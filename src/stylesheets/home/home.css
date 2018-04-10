@@ -8,10 +8,19 @@
     flex-direction: column;
     width: 40%;
     margin: 0 15px; }
+  .home__left {
+    display: flex;
+    width: 30%;
+    justify-content: flex-end; }
+  .home__right {
+    display: flex;
+    flex-direction: column;
+    width: 30%; }
 
 body {
   display: flex;
   min-height: 1vh;
   width: 100%;
   margin: 0;
-  background-color: #dbd8f0; }
+  background-color: #dbd8f0;
+  font-family: 'Amethysta'; }

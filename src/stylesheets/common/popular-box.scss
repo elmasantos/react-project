@@ -1,0 +1,36 @@
+.popular-box {
+  display: flex;
+  width: 75%;
+  height: 200px;
+  max-width: 300px;
+  min-width: 100px;
+  background-color: rgb(242, 242, 242);
+  text-transform: uppercase;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+  margin-bottom: 15px;
+
+  &__element {
+    height: 145px;
+  }
+
+  &__item {
+    text-transform: capitalize;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    color: rgb(192, 162, 177);
+    width: 100%;
+    padding: 15px;
+  }
+
+  &__title {
+    justify-content: flex-start;
+    color: rgb(47, 111, 136);
+    font-size: 13px;
+  }
+}

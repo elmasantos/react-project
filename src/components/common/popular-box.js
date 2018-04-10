@@ -1,11 +1,19 @@
 import React from 'react'
 
-const PopularBox = () => {
-  const renderPopularBox = ({ title, content }) => (
+import '../../stylesheets/common/popular-box.css'
+
+const PopularBox = ({ title, list }) => {
+  const renderContent = () => (
     <div className='popular-box__element'>
-      <span className='popular-box__title'>{title}</span>
       <span className='popular-box__element__content'>
-        {content}
+        { Object.keys(list).splice(0, 6).map((name, index) => (
+            <span
+              className='popular-box__item'
+              key={index}
+            >
+              {name}&nbsp;
+            </span>
+         ))}
       </span>
     </div>
   )
@@ -13,10 +21,16 @@ const PopularBox = () => {
   return (
     <div className='popular-box'>
       <div className='popular-box__content'>
-        {renderPopularBox({ title: 'MOST POPULAR NAMES', content: 'Teacher' })}
+        <span className='popular-box__title'>{title}</span>
+        {renderContent()}
       </div>
     </div>
   )
+}
+
+PopularBox.defaultProps = {
+  title: '',
+  list: {},
 }
 
 export default PopularBox
