@@ -1,7 +1,12 @@
 import React from 'react'
-import usersResources from '../../services/resources/users'
+
+import Layout from '../../components/common/layout'
 import UserCard from '../../components/user-card'
+import AuthBox from '../../components/common/auth-box'
+
 import '../../stylesheets/home/home.css'
+
+import usersResources from '../../services/resources/users'
 
 class Home extends React.Component {
   constructor(){
@@ -37,11 +42,14 @@ class Home extends React.Component {
   render() {
 
    return (
-      <div className="home">
-        <div className="home__user-list">
-          {this.renderUsers()}
+      <Layout>
+        <div className="home">
+          <AuthBox />
+          <div className="home__user-list">
+            {this.renderUsers()}
+          </div>
         </div>
-      </div>
+      </Layout>
     )
   }
 }
