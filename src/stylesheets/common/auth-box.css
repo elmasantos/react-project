@@ -1,0 +1,26 @@
+.auth-box {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 200px;
+  max-width: 300px;
+  min-width: 100px;
+  background-color: #f2f2f2;
+  font-family: 'Antic Didone';
+  text-transform: uppercase;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px; }
+  .auth-box__actions {
+    display: flex; }
+  .auth-box__button {
+    border: none;
+    border-radius: 10px;
+    color: #fff6fe;
+    font-weight: bold;
+    padding: 5px 10px; }
+    .auth-box__button--red {
+      background-color: #60cbf9; }
+    .auth-box__button--blue {
+      background-color: #eac5d8; }

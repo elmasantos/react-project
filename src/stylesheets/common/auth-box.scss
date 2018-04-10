@@ -1,0 +1,39 @@
+.auth-box {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 200px;
+  max-width: 300px;
+  min-width: 100px;
+  background-color: rgb(242, 242, 242);
+  font-family: 'Antic Didone';
+  text-transform: uppercase;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+
+  &__title {
+
+  }
+
+  &__actions {
+    display: flex;
+  }
+
+  &__button {
+    border: none;
+    border-radius: 10px;
+    color: rgb(255, 246, 254);
+    font-weight: bold;
+    padding: 5px 10px;
+
+    &--red {
+      background-color: rgb(96, 203, 249);
+    }
+
+    &--blue {
+      background-color: rgb(234, 197, 216);
+    }
+  }
+}

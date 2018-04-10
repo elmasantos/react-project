@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  background-color: rgb(242, 242, 242);
+  width: 100%;
+  font-family: 'Antic Didone';
+  flex-direction: row;
+  justify-content: center;
+  padding: 8px 0px;
+  margin-bottom: 10px;
+
+  &__title {
+    width: 10%;
+    align-self: center;
+  }
+
+  &__statistics {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+    &__element {
+      display: flex;
+      flex-direction: column;
+      font-weight: bold;
+      color: rgb(47, 111, 136);
+
+      &__value {
+        font-size: 20px;
+        text-align: center;
+      }
+
+      &__label {
+        font-size: 11px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__search {
+    width: 10%;
+  }
+}
