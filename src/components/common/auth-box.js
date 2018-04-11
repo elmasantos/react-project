@@ -2,8 +2,13 @@ import React from 'react'
 
 import '../../stylesheets/common/auth-box.css'
 
-const AuthBox = () => {
-  const renderAuthBox = ({ content }) => (
+class AuthBox extends React.Component {
+  constructor(){
+    super()
+    this.state = { }
+  }
+
+  renderAuthBox = ({ content }) => (
     <div className='authbox__element'>
       <span className='authbox__element__content'>
         {content}
@@ -11,7 +16,7 @@ const AuthBox = () => {
     </div>
   )
 
-  const renderButton = ({ color, title }) => (
+  renderButton = ({ color, title }) => (
     <button
       onClick={() => { console.log('clicked!') }}
       className={`auth-box__button auth-box__button--${color}`}
@@ -20,16 +25,18 @@ const AuthBox = () => {
     </button>
   )
 
-  return (
-    <div className='auth-box'>
-      <div className='auth-box__message'>YOU ARE NOT IN.</div>
-      <div className='auth-box__message'>SO JUST GET IN, NOW!</div>
-      <div className='auth-box__actions'>
-        {renderButton({ color: 'red', title: 'SIGN IN'})}
-        {renderButton({ color: 'blue', title: 'SIGN UP'})}
+  render () {
+    return (
+      <div className='auth-box'>
+        <div className='auth-box__message'>YOU ARE NOT IN.</div>
+        <div className='auth-box__message'>SO JUST GET IN, NOW!</div>
+        <div className='auth-box__actions'>
+          {this.renderButton({ color: 'red', title: 'SIGN IN'})}
+          {this.renderButton({ color: 'blue', title: 'SIGN UP'})}
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 export default AuthBox
