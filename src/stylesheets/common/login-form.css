@@ -1,0 +1,14 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+  align-items: center; }
+  .login-form__button {
+    border: none;
+    border-radius: 30px;
+    color: #fff6fe;
+    background-color: #60cbf9;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px 10px;
+    width: 100px; }
