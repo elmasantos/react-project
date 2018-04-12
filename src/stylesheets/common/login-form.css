@@ -3,6 +3,12 @@
   flex-direction: column;
   text-transform: capitalize;
   align-items: center; }
+  .login-form__box {
+    height: 100px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    margin-right: 27px; }
   .login-form__button {
     border: none;
     border-radius: 30px;
