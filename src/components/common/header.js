@@ -22,7 +22,9 @@ const Header = ({profiles, names, jobs}) => {
         {renderStatistics({ value: names, label: 'Names' })}
         {renderStatistics({ value: jobs, label: 'Jobs' })}
       </div>
-      <div className='header__search'/>
+      <div className='header__search'>
+        <input className='header__search__element' type="text" placeholder="Looking for someone?" />
+      </div>
     </div>
   )
 }
