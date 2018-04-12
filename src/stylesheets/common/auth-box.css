@@ -26,9 +26,9 @@
     font-size: 15px;
     padding: 10px 10px;
     width: 100px; }
-    .auth-box__button--red {
+    .auth-box__button--blue {
       background-color: #60cbf9;
       margin-right: 5px; }
-    .auth-box__button--blue {
+    .auth-box__button--pink {
       background-color: #eac5d8;
       margin-left: 5px; }
