@@ -2,7 +2,7 @@ import React from 'react'
 
 import '../../stylesheets/common/header.css'
 
-const Header = () => {
+const Header = ({profiles, names, jobs}) => {
   const renderStatistics = ({ value, label }) => (
     <div className='header__statistics__element'>
       <span className='header__statistics__element__value'>
@@ -18,13 +18,19 @@ const Header = () => {
     <div className='header'>
       <div className='header__title'>Profiles</div>
       <div className='header__statistics'>
-        {renderStatistics({ value: 55, label: 'Profiles' })}
-        {renderStatistics({ value: 55, label: 'Names' })}
-        {renderStatistics({ value: 55, label: 'Jobs' })}
+        {renderStatistics({ value: profiles, label: 'Profiles' })}
+        {renderStatistics({ value: names, label: 'Names' })}
+        {renderStatistics({ value: jobs, label: 'Jobs' })}
       </div>
       <div className='header__search'/>
     </div>
   )
+}
+
+Header.defaultProps = {
+  profiles: {},
+  names: {},
+  jobs: {},
 }
 
 export default Header

@@ -51,13 +51,27 @@ class Home extends React.Component {
     }, {})
   }
 
+  getProfilesAmount() {
+    const { users } = this.state
+    return users.length
+  }
+
+  getDataAmount(list) {
+    return Object.keys(list).length
+  }
+
   render() {
 
     const jobsList = this.getDataRatings('job')
     const namesList = this.getDataRatings('name')
 
+    const profilesAmount = this.getProfilesAmount()
+
+    const namesAmount = this.getDataAmount(namesList)
+    const jobsAmount = this.getDataAmount(jobsList)
+
     return (
-      <Layout>
+      <Layout profiles={profilesAmount} names={namesAmount} jobs={jobsAmount} >
         <div className="home">
           <div className="home__left">
             <AuthBox />
