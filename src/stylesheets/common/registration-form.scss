@@ -1,0 +1,39 @@
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  height: 160px;
+
+  &__box {
+    height: 120px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 87%;
+    margin-right: 27px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__age_label {
+    width: 40px;
+  }
+
+  &__job_label {
+    width: 70px;
+  }
+
+  &__button {
+    border: none;
+    border-radius: 30px;
+    color: rgb(255, 246, 254);
+    background-color: #60cbf9;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 8px 8px;
+    width: 60px;
+    align-self: center;
+  }
+
+}

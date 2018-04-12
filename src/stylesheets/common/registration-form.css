@@ -1,0 +1,27 @@
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  height: 160px; }
+  .registration-form__box {
+    height: 120px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 87%;
+    margin-right: 27px; }
+  .registration-form__info {
+    display: flex;
+    justify-content: space-between; }
+  .registration-form__age_label {
+    width: 40px; }
+  .registration-form__job_label {
+    width: 70px; }
+  .registration-form__button {
+    border: none;
+    border-radius: 30px;
+    color: #fff6fe;
+    background-color: #60cbf9;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 8px 8px;
+    width: 60px;
+    align-self: center; }
