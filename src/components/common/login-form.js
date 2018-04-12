@@ -2,8 +2,9 @@ import React from 'react'
 
 import '../../stylesheets/common/login-form.css'
 
-const LoginForm = () => (
-  <form className='login-form'>
+const LoginForm = () => {
+  return (
+    <form className='login-form'>
     <div className='login-form__box'>
       <label className='login-form__username'>
         Username:
@@ -21,6 +22,7 @@ const LoginForm = () => (
     </button>
 
   </form>
-)
+  )
+}
 
 export default LoginForm
