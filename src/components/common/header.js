@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Search from './search'
+
 import '../../stylesheets/common/header.css'
 
 const Header = ({profiles, names, jobs}) => {
@@ -22,9 +24,7 @@ const Header = ({profiles, names, jobs}) => {
         {renderStatistics({ value: names, label: 'Names' })}
         {renderStatistics({ value: jobs, label: 'Jobs' })}
       </div>
-      <div className='header__search'>
-        <input className='header__search__element' type="text" placeholder="Looking for someone?" />
-      </div>
+      <Search/>
     </div>
   )
 }
