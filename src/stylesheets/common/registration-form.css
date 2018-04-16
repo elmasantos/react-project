@@ -1,17 +1,18 @@
 .registration-form {
   display: flex;
   flex-direction: column;
-  height: 160px;
+  height: 335px;
   text-transform: capitalize; }
   .registration-form__box {
-    height: 120px;
+    height: 280px;
     margin-left: 10px;
     margin-bottom: 10px;
     width: 87%;
     margin-right: 27px; }
   .registration-form__info {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    flex-wrap: wrap; }
   .registration-form__age_label {
     width: 40px; }
   .registration-form__job_label {

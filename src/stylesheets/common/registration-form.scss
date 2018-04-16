@@ -1,11 +1,11 @@
 .registration-form {
   display: flex;
   flex-direction: column;
-  height: 160px;
+  height: 335px;
   text-transform: capitalize;
 
   &__box {
-    height: 120px;
+    height: 280px;
     margin-left: 10px;
     margin-bottom: 10px;
     width: 87%;
@@ -15,6 +15,7 @@
   &__info {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   &__age_label {
