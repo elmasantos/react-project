@@ -7,14 +7,15 @@ import '../../stylesheets/common/registration-form.css'
 class RegistrationForm extends React.Component {
   constructor() {
     super()
+
     this._handleSubmit = this._handleSubmit.bind(this)
   }
 
   _handleSubmit(event) {
     event.preventDefault()
     const data = new FormData(event.target)
-
-    usersResources.postUser(data)
+    const { signup } = this.props
+    signup(data)
   }
 
   render() {

@@ -47,6 +47,8 @@ class AuthBox extends React.Component {
   }
 
   render () {
+    const { signup } = this.props
+
     let firstMessage;
     let secondMessage;
     let buttons;
@@ -64,7 +66,7 @@ class AuthBox extends React.Component {
     }
     else if (this.state.showSignUp){
       firstMessage = <div className='auth-box__message'>Sign up:</div>
-      secondMessage = <RegistrationForm />
+      secondMessage = <RegistrationForm signup={signup}/>
     }
     return (
       <div className='auth-box'>

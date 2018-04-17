@@ -61,7 +61,8 @@ class Home extends React.Component {
   }
 
   render() {
-
+    const { signup, signupError } = this.props
+    console.log(signupError)
     const jobsList = this.getDataRatings('job')
     const namesList = this.getDataRatings('name')
 
@@ -74,7 +75,7 @@ class Home extends React.Component {
       <Layout profiles={profilesAmount} names={namesAmount} jobs={jobsAmount} >
         <div className="home">
           <div className="home__left">
-            <AuthBox />
+            <AuthBox signup={signup}/>
           </div>
           <div className="home__user-list">
             {this.renderUsers()}
