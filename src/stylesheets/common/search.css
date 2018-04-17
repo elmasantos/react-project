@@ -1,7 +1,7 @@
 .search {
-  width: 13%;
+  width: 23%;
   align-self: center;
-  margin-right: 25px; }
+  display: flex; }
   .search__element {
     text-transform: uppercase;
     text-align: center;
@@ -11,6 +11,5 @@
     border: none;
     border-radius: 15px;
     width: 100%;
-    display: flex;
     padding: 6px 10px;
     font-size: 12px; }
