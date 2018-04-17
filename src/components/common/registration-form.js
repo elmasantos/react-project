@@ -1,5 +1,7 @@
 import React from 'react'
 
+import usersResources from '../../services/resources/users'
+
 import '../../stylesheets/common/registration-form.css'
 
 class RegistrationForm extends React.Component {
@@ -12,10 +14,7 @@ class RegistrationForm extends React.Component {
     event.preventDefault()
     const data = new FormData(event.target)
 
-    fetch('https://profiler-api-codeminer.herokuapp.com/users', {
-      method: 'POST',
-      body: data,
-    });
+    usersResources.postUser(data)
   }
 
   render() {
