@@ -1,13 +1,15 @@
 import React from 'react'
+import Alert from 'react-s-alert';
 
 import Layout from '../../components/common/layout'
 import UserCard from '../../components/user-card'
 import AuthBox from '../../components/common/auth-box'
 import PopularBox from '../../components/common/popular-box'
+import usersResources from '../../services/resources/users'
 
 import '../../stylesheets/home/home.css'
-
-import usersResources from '../../services/resources/users'
+import 'react-s-alert/dist/s-alert-default.css';
+import 'react-s-alert/dist/s-alert-css-effects/slide.css';
 
 class Home extends React.Component {
   constructor(){
@@ -62,7 +64,10 @@ class Home extends React.Component {
 
   render() {
     const { signup, signupError } = this.props
-    console.log(signupError)
+    if (signupError) {
+      Alert.error(signupError)
+    }
+
     const jobsList = this.getDataRatings('job')
     const namesList = this.getDataRatings('name')
 
@@ -73,6 +78,7 @@ class Home extends React.Component {
 
     return (
       <Layout profiles={profilesAmount} names={namesAmount} jobs={jobsAmount} >
+        <Alert stack={{limit: 1}} />
         <div className="home">
           <div className="home__left">
             <AuthBox signup={signup}/>
