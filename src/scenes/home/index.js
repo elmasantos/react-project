@@ -6,7 +6,8 @@ import dataActions from '../../store/data/actions'
 
 const mapStateToProps = (state) => ({
   signupError: state.dataReducer.signup.error,
-  signinError: state.dataReducer.signin.error
+  signinError: state.dataReducer.signin.error,
+  authenticated: state.dataReducer.signin.authenticated
 })
 
 const mapDispatchToProps = (dispatch) => ({

@@ -47,7 +47,7 @@ class AuthBox extends React.Component {
   }
 
   render () {
-    const { signin, signup } = this.props
+    const { signin, signup, authenticated } = this.props
 
     let firstMessage;
     let secondMessage;

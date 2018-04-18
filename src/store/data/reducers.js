@@ -18,10 +18,20 @@ const signin = (state = {}, {type, payload}) => {
   switch(type) {
     case Types.SIGN_IN_USER_FAILURE:
       return {
-        error: payload.error
+        error: payload.error,
+        token: null,
+        authenticated: false
       }
     case Types.SIGN_IN_USER_REQUEST:
+      return {
+        token: null,
+        authenticated: false
+      }
     case Types.SIGN_IN_USER_SUCCESS:
+      return {
+        token: payload.token,
+        authenticated: true
+      }
     default:
       return state
   }

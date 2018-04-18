@@ -28,8 +28,11 @@ const signin = (data) => (dispatch) => {
   })
 
   return usersResources.login(data)
-    .then(() => {
+    .then((response) => {
       dispatch({
+        payload:{
+          token: response.data.auth_token
+        },
         type: Types.SIGN_IN_USER_SUCCESS,
       })
     })

@@ -63,7 +63,7 @@ class Home extends React.Component {
   }
 
   render() {
-    const { signin, signup, signinError, signupError } = this.props
+    const { signin, signup, signinError, signupError, authenticated } = this.props
     if (signupError) {
       Alert.error(signupError)
     }
@@ -84,7 +84,7 @@ class Home extends React.Component {
         <Alert stack={{limit: 3}} />
         <div className="home">
           <div className="home__left">
-            <AuthBox signup={signup} signin={signin}/>
+            <AuthBox signup={signup} signin={signin} authenticated={authenticated}/>
           </div>
           <div className="home__user-list">
             {this.renderUsers()}
