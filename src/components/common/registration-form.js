@@ -1,7 +1,5 @@
 import React from 'react'
 
-import usersResources from '../../services/resources/users'
-
 import '../../stylesheets/common/registration-form.css'
 
 class RegistrationForm extends React.Component {

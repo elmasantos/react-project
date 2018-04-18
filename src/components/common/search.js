@@ -1,6 +1,5 @@
 import React from 'react'
 
-import Suggestions from './suggestions'
 import usersResources from '../../services/resources/users'
 
 import '../../stylesheets/common/search.css'
