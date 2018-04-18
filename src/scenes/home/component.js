@@ -63,9 +63,12 @@ class Home extends React.Component {
   }
 
   render() {
-    const { signup, signupError } = this.props
+    const { signin, signup, signinError, signupError } = this.props
     if (signupError) {
       Alert.error(signupError)
+    }
+    if (signinError) {
+      Alert.error(signinError)
     }
 
     const jobsList = this.getDataRatings('job')
@@ -78,10 +81,10 @@ class Home extends React.Component {
 
     return (
       <Layout profiles={profilesAmount} names={namesAmount} jobs={jobsAmount} >
-        <Alert stack={{limit: 1}} />
+        <Alert stack={{limit: 3}} />
         <div className="home">
           <div className="home__left">
-            <AuthBox signup={signup}/>
+            <AuthBox signup={signup} signin={signin}/>
           </div>
           <div className="home__user-list">
             {this.renderUsers()}

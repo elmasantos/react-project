@@ -14,6 +14,20 @@ const signup = (state = {}, { type, payload }) => {
   }
 }
 
+const signin = (state = {}, {type, payload}) => {
+  switch(type) {
+    case Types.SIGN_IN_USER_FAILURE:
+      return {
+        error: payload.error
+      }
+    case Types.SIGN_IN_USER_REQUEST:
+    case Types.SIGN_IN_USER_SUCCESS:
+    default:
+      return state
+  }
+}
+
 export default combineReducers({
-  signup
+  signup,
+  signin
 })

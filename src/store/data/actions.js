@@ -22,6 +22,28 @@ const signup = (data) => (dispatch) => {
       })
 }
 
+const signin = (data) => (dispatch) => {
+  dispatch( {
+    type: Types.SIGN_IN_USER_REQUEST,
+  })
+
+  return usersResources.login(data)
+    .then(() => {
+      dispatch({
+        type: Types.SIGN_IN_USER_SUCCESS,
+      })
+    })
+      .catch((error) => {
+        dispatch({
+          type: Types.SIGN_IN_USER_FAILURE,
+          payload: {
+            error: error.response.data.message,
+          }
+        })
+      })
+}
+
 export default {
   signup,
+  signin
 }
