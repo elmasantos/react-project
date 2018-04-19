@@ -31,7 +31,8 @@ const signin = (data) => (dispatch) => {
     .then((response) => {
       dispatch({
         payload:{
-          token: response.data.auth_token
+          token: response.data.auth_token,
+          id: response.data.id
         },
         type: Types.SIGN_IN_USER_SUCCESS,
       })
@@ -46,7 +47,32 @@ const signin = (data) => (dispatch) => {
       })
 }
 
+const getbyid = (id) => (dispatch) => {
+  dispatch({
+    type: Types.GET_BY_ID_REQUEST,
+  })
+  return usersResources.getById(id)
+    .then((response) => {
+      console.log(response)
+      dispatch({
+        payload: {
+          name: response.data.attributes.name
+        },
+        type: Types.GET_BY_ID_SUCCESS,
+      })
+    })
+      .catch((error) => {
+        dispatch({
+          type: Types.GET_BY_ID_FAILURE,
+          payload: {
+            error: error.response.data.message,
+          }
+        })
+      })
+}
+
 export default {
   signup,
-  signin
+  signin,
+  getbyid
 }
