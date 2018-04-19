@@ -47,13 +47,18 @@ class AuthBox extends React.Component {
   }
 
   render () {
-    const { getbyid, signin, signup, authenticated } = this.props
+    const { getbyid, signin, signup, authenticated, user_name } = this.props
 
     let firstMessage;
     let secondMessage;
     let buttons;
 
-    if(this.state.showSignIn === false && this.state.showSignUp === false){
+    if(authenticated) {
+      firstMessage = <div className='auth-box__message'>Welcome!</div>
+      secondMessage = <div className='auth-box__message'>You are logged in!</div>
+      buttons = <button className='auth-box__simple-button'><span>OK</span></button>
+    }
+    else if(this.state.showSignIn === false && this.state.showSignUp === false){
       firstMessage = <div className='auth-box__message'>YOU ARE NOT IN.</div>
       secondMessage = <div className='auth-box__message'>SO JUST GET IN, NOW!</div>
       buttons = <div className='auth-box__actions'>
