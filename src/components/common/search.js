@@ -1,6 +1,7 @@
 import React from 'react'
 
 import usersResources from '../../services/resources/users'
+import Suggestions from './suggestions'
 
 import '../../stylesheets/common/search.css'
 
@@ -9,11 +10,12 @@ class Search extends React.Component {
     super()
     this.state = {
       query: '',
-      results: []
+      results: [],
+      search_results: []
     }
   }
 
-  getInfo = () => {
+  componentWillMount() {
     usersResources.getUsers()
       .then((result) => this.setState({
         results: result.data
@@ -26,7 +28,9 @@ class Search extends React.Component {
     }, () => {
       if(this.state.query && this.state.query.length > 1){
         if(this.state.query.length % 2 === 0){
-          this.getInfo()
+          this.setState({
+            search_results: this.state.results.filter((user) => user.attributes.name.includes(this.state.query.toLowerCase()))
+          })
         }
       }
     })
