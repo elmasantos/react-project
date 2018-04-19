@@ -8,7 +8,8 @@ const mapStateToProps = (state) => ({
   signupError: state.dataReducer.signup.error,
   signinError: state.dataReducer.signin.error,
   authenticated: state.dataReducer.signin.authenticated,
-  user_id: state.dataReducer.signin.id
+  user_id: state.dataReducer.signin.id,
+  user_name: state.dataReducer.getbyid.name
 })
 
 const mapDispatchToProps = (dispatch) => ({
