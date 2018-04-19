@@ -1,6 +1,31 @@
 import * as Types from './action-types'
 import usersResources from '../../services/resources/users'
 
+
+const getusers = (data) => (dispatch) => {
+  dispatch({
+    type: Types.GET_USERS_REQUEST,
+  })
+
+  return usersResources.getUsers()
+    .then((response) => {
+      dispatch({
+        payload: {
+          users: response.data
+        },
+        type: Types.GET_USERS_SUCCESS,
+      })
+    })
+      .catch((error) => {
+        dispatch({
+          type: Types.GET_USERS_FAILURE,
+          payload: {
+            error: error.response.data.message,
+          }
+        })
+      })
+}
+
 const signup = (data) => (dispatch) => {
   dispatch({
     type: Types.SIGN_UP_USER_REQUEST,
@@ -53,7 +78,6 @@ const getbyid = (id) => (dispatch) => {
   })
   return usersResources.getById(id)
     .then((response) => {
-      console.log(response)
       dispatch({
         payload: {
           name: response.data.attributes.name
@@ -74,5 +98,6 @@ const getbyid = (id) => (dispatch) => {
 export default {
   signup,
   signin,
-  getbyid
+  getbyid,
+  getusers,
 }

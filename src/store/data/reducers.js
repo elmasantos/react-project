@@ -57,8 +57,28 @@ const getbyid = (state = {}, {type, payload}) => {
   }
 }
 
+const getusers = (state = {}, {type, payload}) => {
+  switch(type) {
+    case Types.GET_BY_ID_FAILURE:
+      return {
+        error: payload.error
+      }
+    case Types.GET_BY_ID_REQUEST:
+      return {
+        users: ''
+      }
+    case Types.GET_BY_ID_SUCCESS:
+      return {
+        users: payload.users
+      }
+    default:
+      return state
+  }
+}
+
 export default combineReducers({
   signup,
   signin,
-  getbyid
+  getbyid,
+  getusers,
 })
