@@ -4,7 +4,7 @@ import Search from './search'
 
 import '../../stylesheets/common/header.css'
 
-const Header = ({profiles, names, jobs}) => {
+const Header = ({users, profiles, names, jobs}) => {
   const renderStatistics = ({ value, label }) => (
     <div className='header__statistics__element'>
       <span className='header__statistics__element__value'>
@@ -24,12 +24,13 @@ const Header = ({profiles, names, jobs}) => {
         {renderStatistics({ value: names, label: 'Names' })}
         {renderStatistics({ value: jobs, label: 'Jobs' })}
       </div>
-      <Search/>
+      <Search users={users}/>
     </div>
   )
 }
 
 Header.defaultProps = {
+  users: {},
   profiles: {},
   names: {},
   jobs: {},

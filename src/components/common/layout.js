@@ -2,10 +2,10 @@ import React from 'react'
 
 import Header from './header'
 
-const Layout = ({ profiles, names, jobs, children }) => {
+const Layout = ({ users, profiles, names, jobs, children }) => {
   return (
     <div className='layout'>
-      <Header profiles={profiles} names={names} jobs={jobs}/>
+      <Header users={users} profiles={profiles} names={names} jobs={jobs}/>
       {children}
     </div>
   )

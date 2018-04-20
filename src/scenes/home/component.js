@@ -17,7 +17,6 @@ class Home extends React.Component {
 
   renderUsers() {
     const { users } = this.props
-    console.log("users", users)
     if(users) {
       return users.map((user, index) => (
         <UserCard
@@ -71,8 +70,8 @@ class Home extends React.Component {
       signupError,
       authenticated,
       user_name,
+      users
     } = this.props
-    console.log(this.props)
 
     if (signupError) {
       Alert.error(signupError)
@@ -90,7 +89,7 @@ class Home extends React.Component {
     const jobsAmount = this.getDataAmount(jobsList)
 
     return (
-      <Layout profiles={profilesAmount} names={namesAmount} jobs={jobsAmount} >
+      <Layout users={users} profiles={profilesAmount} names={namesAmount} jobs={jobsAmount} >
         <Alert stack={{limit: 3}} />
         <div className="home">
           <div className="home__left">

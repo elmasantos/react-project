@@ -61,11 +61,12 @@ const getusers = (state = {}, {type, payload}) => {
   switch(type) {
     case Types.GET_USERS_FAILURE:
       return {
-        error: payload.error
+        error: payload.error,
+        users: null
       }
     case Types.GET_USERS_REQUEST:
       return {
-        users: ''
+        users: null
       }
     case Types.GET_USERS_SUCCESS:
       return {
