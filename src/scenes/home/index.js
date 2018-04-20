@@ -9,7 +9,9 @@ const mapStateToProps = (state) => ({
   signinError: state.dataReducer.signin.error,
   authenticated: state.dataReducer.signin.authenticated,
   user_id: state.dataReducer.signin.id,
-  user_name: state.dataReducer.getbyid.name,
+  user_name: state.dataReducer.signin.name,
+  age: state.dataReducer.signin.age,
+  job: state.dataReducer.signin.job,
   users: state.dataReducer.getusers.users
 })
 

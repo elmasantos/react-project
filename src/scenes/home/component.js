@@ -63,13 +63,15 @@ class Home extends React.Component {
 
   render() {
     const {
-      getbyid,
       signin,
       signup,
       signinError,
       signupError,
       authenticated,
       user_name,
+      user_id,
+      age,
+      job,
       users
     } = this.props
 
@@ -94,7 +96,7 @@ class Home extends React.Component {
         <div className="home">
           <div className="home__left">
             <AuthBox signup={signup} signin={signin} authenticated={authenticated}
-              getbyid={getbyid} user_name={user_name} />
+              user_name={user_name} user_id={user_id} age={age} job={job} />
           </div>
           <div className="home__user-list">
             {this.renderUsers()}

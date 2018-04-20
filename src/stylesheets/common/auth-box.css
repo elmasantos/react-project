@@ -18,6 +18,21 @@
     width: 100%;
     margin-left: 70px;
     font-size: 16px; }
+  .auth-box__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column; }
+  .auth-box__age {
+    font-size: 14px; }
+    .auth-box__age--blue {
+      color: #86c1eb;
+      font-style: italic; }
+  .auth-box__job {
+    font-size: 14px; }
+    .auth-box__job--blue {
+      color: #86c1eb;
+      font-style: italic; }
   .auth-box__button {
     border: none;
     border-radius: 30px;

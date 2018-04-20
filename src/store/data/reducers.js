@@ -20,17 +20,28 @@ const signin = (state = {}, {type, payload}) => {
       return {
         error: payload.error,
         token: null,
+        id: null,
+        name: null,
+        age: null,
+        job: null,
         authenticated: false
       }
     case Types.SIGN_IN_USER_REQUEST:
       return {
         token: null,
+        id: null,
+        name: null,
+        age: null,
+        job: null,
         authenticated: false
       }
     case Types.SIGN_IN_USER_SUCCESS:
       return {
         token: payload.token,
         id: payload.id,
+        name: payload.name,
+        age: payload.age,
+        job: payload.job,
         authenticated: true
       }
     default:

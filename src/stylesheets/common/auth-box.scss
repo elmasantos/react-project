@@ -23,6 +23,29 @@
     font-size: 16px;
   }
 
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  &__age {
+    font-size: 14px;
+    &--blue {
+      color: rgb(134, 193, 235);
+      font-style: italic;
+    }
+  }
+
+  &__job {
+    font-size: 14px;
+    &--blue {
+      color: rgb(134, 193, 235);
+      font-style: italic;
+    }
+  }
+
   &__button {
     border: none;
     border-radius: 30px;

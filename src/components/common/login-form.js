@@ -11,7 +11,7 @@ class LoginForm extends React.Component {
   _handleSubmit(event) {
     event.preventDefault()
     const data = new FormData(event.target)
-    const { signin, authenticated, getbyid } = this.props
+    const { signin } = this.props
     signin(data)
   }
 

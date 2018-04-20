@@ -47,15 +47,33 @@ class AuthBox extends React.Component {
   }
 
   render () {
-    const { getbyid, signin, signup, authenticated, user_name } = this.props
+    const { signin, signup, authenticated, user_name, user_id, age, job } = this.props
 
     let firstMessage;
     let secondMessage;
     let buttons;
 
     if(authenticated) {
-      firstMessage = <div className='auth-box__message'>Welcome!</div>
-      secondMessage = <div className='auth-box__message'>You are logged in!</div>
+
+      firstMessage = <div className='auth-box__message'>{user_name}</div>
+      secondMessage =
+      <div className='auth-box__info'>
+        <div className='auth-box__age'>
+          <span className='auth-box__age--blue'>
+            {age}
+          </span>
+          <span>
+            &nbsp;years old
+          </span>
+        </div>
+        <div className='auth-box__job'>
+          Work as&nbsp;
+          <span className='auth-box__job--blue'>
+            {job}
+          </span>
+        </div>
+      </div>
+
       buttons = <button className='auth-box__simple-button'><span>OK</span></button>
     }
     else if(this.state.showSignIn === false && this.state.showSignUp === false){
@@ -68,7 +86,7 @@ class AuthBox extends React.Component {
     }
     else if (this.state.showSignIn){
       firstMessage = <div className='auth-box__message'>Sign in:</div>
-      secondMessage = <LoginForm signin={signin} getbyid={getbyid} authenticated={authenticated} />
+      secondMessage = <LoginForm signin={signin} authenticated={authenticated} />
     }
     else if (this.state.showSignUp){
       firstMessage = <div className='auth-box__message'>Sign up:</div>

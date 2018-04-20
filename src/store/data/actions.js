@@ -57,7 +57,10 @@ const signin = (data) => (dispatch) => {
       dispatch({
         payload:{
           token: response.data.auth_token,
-          id: response.data.id
+          id: response.data.id,
+          name: response.data.attributes.name,
+          age: response.data.attributes.age,
+          job: response.data.attributes.job
         },
         type: Types.SIGN_IN_USER_SUCCESS,
       })
