@@ -59,15 +59,15 @@ const getbyid = (state = {}, {type, payload}) => {
 
 const getusers = (state = {}, {type, payload}) => {
   switch(type) {
-    case Types.GET_BY_ID_FAILURE:
+    case Types.GET_USERS_FAILURE:
       return {
         error: payload.error
       }
-    case Types.GET_BY_ID_REQUEST:
+    case Types.GET_USERS_REQUEST:
       return {
         users: ''
       }
-    case Types.GET_BY_ID_SUCCESS:
+    case Types.GET_USERS_SUCCESS:
       return {
         users: payload.users
       }
