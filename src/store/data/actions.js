@@ -11,7 +11,7 @@ const getusers = (data) => (dispatch) => {
     .then((response) => {
       dispatch({
         payload: {
-          users: response.data
+          users: response.data.reverse()
         },
         type: Types.GET_USERS_SUCCESS,
       })
