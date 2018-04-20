@@ -2,9 +2,9 @@ import React from 'react'
 import Alert from 'react-s-alert';
 
 import Layout from '../../components/common/layout'
-import UserCard from '../../components/user-card'
 import AuthBox from '../../components/common/auth-box'
 import PopularBox from '../../components/common/popular-box'
+import UsersList from '../../components/users-list/index'
 
 import '../../stylesheets/home/home.css'
 import 'react-s-alert/dist/s-alert-default.css';
@@ -18,15 +18,7 @@ class Home extends React.Component {
   renderUsers() {
     const { users } = this.props
     if(users) {
-      return users.map((user, index) => (
-        <UserCard
-          name={user.attributes.name}
-          age={user.attributes.age}
-          job={user.attributes.job}
-          description={user.attributes.description}
-          key={index}
-        />
-      ))
+      <UsersList users={users}/>
     }
   }
 
@@ -99,7 +91,7 @@ class Home extends React.Component {
               user_name={user_name} user_id={user_id} age={age} job={job} />
           </div>
           <div className="home__user-list">
-            {this.renderUsers()}
+            <UsersList users={users}/>
           </div>
           <div className="home__right">
             <PopularBox title="MOST POPULAR NAMES" list={namesList}/>
