@@ -5,66 +5,75 @@ import Layout from '../../components/common/layout'
 import UserCard from '../../components/user-card'
 import AuthBox from '../../components/common/auth-box'
 import PopularBox from '../../components/common/popular-box'
-import usersResources from '../../services/resources/users'
 
 import '../../stylesheets/home/home.css'
 import 'react-s-alert/dist/s-alert-default.css';
 import 'react-s-alert/dist/s-alert-css-effects/slide.css';
 
 class Home extends React.Component {
-  constructor(){
-    super()
-
-    this.state = {
-      users: []
-    }
-  }
-
   componentWillMount() {
-    usersResources.getUsers()
-      .then((result) => this.setState({
-        users: result.data
-      }))
+    this.props.getusers()
   }
 
   renderUsers() {
-    const { users } = this.state
-    console.log(users);
-
-    return users.map((user, index) => (
-      <UserCard
-        name={user.attributes.name}
-        age={user.attributes.age}
-        job={user.attributes.job}
-        description={user.attributes.description}
-        key={index}
-      />
-    ))
+    const { users } = this.props
+    console.log("users", users)
+    if(users) {
+      return users.map((user, index) => (
+        <UserCard
+          name={user.attributes.name}
+          age={user.attributes.age}
+          job={user.attributes.job}
+          description={user.attributes.description}
+          key={index}
+        />
+      ))
+    }
   }
 
   getDataRatings(attribute) {
-    const { users } = this.state
+    const { users } = this.props
+    if(users) {
+      return users.reduce((result, user) => {
+        const actual = result[user.attributes[attribute]]
+        result[user.attributes[attribute]] = actual ? actual + 1 : 1
 
-    return users.reduce((result, user) => {
-      const actual = result[user.attributes[attribute]]
-      result[user.attributes[attribute]] = actual ? actual + 1 : 1
-
-      return result
-    }, {})
+        return result
+      }, {})
+    }
   }
 
   getProfilesAmount() {
-    const { users } = this.state
-    return users.length
+    const { users } = this.props
+    if(users){
+      return users.length
+    }
+    else {
+      return 0
+    }
   }
 
   getDataAmount(list) {
-    return Object.keys(list).length
+    if(list) {
+      return Object.keys(list).length
+    }
+    else {
+      return 0
+    }
   }
 
   render() {
-    const { getbyid, signin, signup, signinError, signupError, authenticated,
-      user_name } = this.props
+    const {
+      getbyid,
+      signin,
+      signup,
+      signinError,
+      signupError,
+      authenticated,
+      user_name,
+    } = this.props
+    console.log(this.props)
+
     if (signupError) {
       Alert.error(signupError)
     }
