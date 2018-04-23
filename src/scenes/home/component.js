@@ -15,13 +15,6 @@ class Home extends React.Component {
     this.props.getusers()
   }
 
-  renderUsers() {
-    const { users } = this.props
-    if(users) {
-      <UsersList users={users}/>
-    }
-  }
-
   getDataRatings(attribute) {
     const { users } = this.props
     if(users) {

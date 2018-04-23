@@ -2,7 +2,7 @@ import React from 'react'
 
 import UserCard from '../user-card/index'
 
-import '../../stylesheets/home/home.css'
+import '../../stylesheets/home/users-list.css'
 
 class UsersList extends React.Component{
   renderUsers() {
@@ -22,7 +22,7 @@ class UsersList extends React.Component{
 
   render() {
     return (
-      <div >{this.renderUsers()}</div>
+      <div className='users-list' >{this.renderUsers()}</div>
     )
   }
 }
